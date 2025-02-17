@@ -1,0 +1,11 @@
+var marks=parseInt(prompt("Enter the marks scored by the student : "))
+if(marks==100)
+console.log("Phenomenal!")
+else if(marks>=85)
+console.log("Excellent")
+else if(marks>=71 && marks<85)
+console.log("Good work")
+else if(marks<71&&marks>=51)
+console.log("Practise well")
+else
+console.log("Hard work is needed")
