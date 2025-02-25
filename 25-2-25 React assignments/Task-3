@@ -1,0 +1,55 @@
+By using Ternary;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+function Yes(){
+    return <h2>The given array length is a multiple of 3 </h2>
+}
+function No(){
+    return <h2>The given array length is not a multiple of 3 </h2>
+}
+
+function CheckArray(props) {
+  const arr = props.array
+    return(
+        <>
+        {arr.length%3==0 ? <Yes/>:<No/>}  
+        </>
+        )
+}
+const A=[1,3,3]
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckArray array={A} />);
+-------------------------------------------------------------------------
+By using Logical &&;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+function CheckArray(props) {
+    const isarr = props.array
+    return(
+        <>
+            {isarr.length%2==0 && 
+            <h1>The given array length is even</h1>
+            }
+            {isarr.length%2!=0 &&
+            <h1>The given array length is odd</h1>
+            }
+        </>
+    )
+}
+const isarr=[1,3,3]
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckArray array={isarr} />);
+---------------------------------------------------------------------------
+By using If conditions;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+function CheckArray(props) {
+    const arr = props.array
+    if(arr.lengh%2==0){
+        return <h1>The given array length is even</h1>
+    }
+    return <h1>The given array length is odd</h1>
+}
+const A=[1,3,3]
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckArray array={A} />);

@@ -1,0 +1,66 @@
+By using Ternary Operator
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Divisible() {
+	return <h1>It is divisible by 13</h1>;
+}
+
+function Not() {
+	return <h1>It is not divisible by 13</h1>;
+}
+function CheckNumber(props) {
+  const isNum = props.num;
+ return (
+		<>
+			{ isNum%13==0 ? <Divisible/> : <Not/> }
+		</>
+	);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckNumber num="90" />)
+----------------------------------------------------------------------------------------------------
+By using If conditions
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+
+function CheckNumber(props) {
+  const isNum = props.num;
+  if (isNum%13==0) {
+    return(
+        <h1>The given number {isNum} is divisible by 13</h1>
+    )
+  }
+  return(
+      <h1>The given number {isNum} is  not divisible by 13</h1>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckNumber num="903" />);
+-----------------------------------------------------------------------------------------------------
+By using Logical &&;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+
+function CheckNumber(props) {
+  const isNum = props.num;
+    return(
+        <>
+            {isNum%13==0 &&
+        <h1>The given number {isNum} is divisible by 13</h1>
+}
+             {isNum%13!=0 &&
+        <h1>The given number {isNum} is  not divisible by 13</h1>
+}
+        </>  
+)    
+  
+ 
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckNumber num="1" />);

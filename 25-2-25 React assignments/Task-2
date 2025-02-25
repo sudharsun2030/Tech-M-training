@@ -1,0 +1,61 @@
+By using Logical &&;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+
+function CheckString(props) {
+  const str = props.string;
+    return(
+        <>
+            {str.length%2==0 &&
+        <h1>The given string {str} length is even</h1>
+}
+             {str.length%2!=0 &&
+        <h1>The given string {str} length is odd</h1>
+}
+        </>  
+)    
+  
+ 
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckString string="ght" />);
+------------------------------------------------------------------------------------------
+By using if conditions;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+
+function CheckString(props) {
+  const str = props.string;
+
+        if(str.length%2==0){
+        return <h1>The given string length is even</h1>
+        }
+    return <h1>The given string length is odd</h1> 
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckString string="ght" />);
+----------------------------------------------------------------------------------------------
+By using ternary Operator;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+function Even(){
+    return <h2>The given string length is even </h2>
+}
+function Odd(){
+    return <h2>The given string length is odd </h2>
+}
+
+function CheckString(props) {
+  const str = props.string;
+    return(
+        <>
+        {str.length%2==0 ? <Even/>:<Odd/>}  
+        </>
+)
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckString string="ght" />);
