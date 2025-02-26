@@ -1,0 +1,10 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+class Course extends React.Component{
+    render(){
+    return <h1>{this.props.value} Course</h1>;
+    }
+}
+    
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Course value="IT"/>);

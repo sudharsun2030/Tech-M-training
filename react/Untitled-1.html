@@ -1,0 +1,63 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        background-color: aqua;
+        background-image: url(https://cdn.britannica.com/48/252748-050-C514EFDB/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.jpg);
+        background-size: cover;
+        background-position: top;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #root1,#root2 {
+       
+        margin: 100px auto;
+        padding: 100px;
+        width: 10%;
+        background-color: whitesmoke;
+        background-image: url(https://4kwallpapers.com/images/wallpapers/royal-challengers-bangalore-indian-premier-league-ipl-ipl-2880x1800-4937.png);
+        background-size: cover;
+        font-size: large;
+        text-align: left;
+    }
+
+    h1,h2 {
+        color: #ffffff;
+        font-size: 10px;
+    }
+</style>
+    
+</head>
+<body>
+   
+    <div id="root1"></div>
+    <div id="root2"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+<script type="text/jsx">
+        let rt1 = document.getElementById("root1");
+
+        ReactDOM.createRoot(rt1).render(
+            <>
+                <h1>KING</h1>
+                
+            </>
+        );
+        let rt2=document.getElementById("root2");
+        ReactDOM.createRoot(rt2).render(
+            <>
+                <h2>forever</h2>
+                
+            </>
+        );
+    </script>
+    
+</body>
+</html>

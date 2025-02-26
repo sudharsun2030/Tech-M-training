@@ -1,0 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+function Flower(props){
+    return <h1>{props.value} Flower</h1>;
+}
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Flower value="Rose"/>);
