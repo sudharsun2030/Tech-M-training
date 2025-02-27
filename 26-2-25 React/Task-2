@@ -1,0 +1,24 @@
+import React from "react";
+import ReactDOM from 'react-dom/client';
+
+function Student(props) {
+    return <li>Name:{props.Name}  & Department:{props.Department} </li>
+}
+
+function Department() {
+    const name = [
+        {id: 1,Name:"Walt",Department:'Chemistry'},
+        {id: 2,Name:'Jessy',Department:'MBA'},
+        {id: 3,Name:'Mike',Department:'CSE'}
+    ];
+    return(
+        <>
+        <h1>Student Details</h1>
+        <ul>
+        {name.map((name) => <Student key={name.id} Name={name.Name} Department={name.Department} />)}
+        </ul>
+        </>
+    )
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Department/>);
