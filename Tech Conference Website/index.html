@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX Conference</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="menuToggle">☰</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="#">About</a>
+                    <ul class="dropdown">
+                        <li><a href="mission.html">Our Mission</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Welcome to InnovateX</h1>
+            <p>The premier tech conference for innovation and networking.</p>
+            <div class="countdown" id="countdown"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 InnovateX. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal Window -->
+    <div id="modal">
+        <div id="modalContent"></div>
+        <button id="closeModal">Close</button>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function startCountdown(eventDate) {
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = eventDate - now;
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+            setInterval(updateCountdown, 1000);
+        }
+        startCountdown(new Date("2025-10-01T00:00:00").getTime());
+
+        // Mobile Navigation Toggle
+        // document.getElementById("menuToggle").addEventListener("click", function () {
+        //     document.querySelector("nav ul").classList.toggle("open");
+        // });
+
+        // Mobile Dropdown Toggle
+        document.querySelectorAll(".has-dropdown > a").forEach(dropdown => {
+            dropdown.addEventListener("click", function (e) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            });
+        });
+
+        // Modal Window
+        document.getElementById("closeModal").addEventListener("click", () => {
+            document.getElementById("modal").style.display = "none";
+        });
+
+    </script>
+</body>
+</html>

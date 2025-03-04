@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Dr. Jane Smith",
+    "title": "AI Researcher",
+    "company": "Tech Innovations",
+    "bio": "Expert in machine learning and AI applications.",
+    "image": "images/jane_smith.jpg"
+  },
+  {
+    "name": "John Doe",
+    "title": "CTO",
+    "company": "NextGen Solutions",
+    "bio": "Leader in cloud computing and cybersecurity.",
+    "image": "images/john_doe.jpg"
+  }
+]
