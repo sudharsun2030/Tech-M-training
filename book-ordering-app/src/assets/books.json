@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "White nights",
+      "author": "Fyodor Doetoevsky",
+      "price": 25.99,
+      "image": "assets/images/angular-book.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Stranger",
+      "author": "Albert Camus",
+      "price": 30.49,
+      "image": "assets/images/typescript-book.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Metamorphosis",
+      "author": "Franz Kafka",
+      "price": 20.00,
+      "image": "assets/images/javascript-book.jpg"
+    }
+  ]
+  
